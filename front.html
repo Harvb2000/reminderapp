@@ -16,25 +16,25 @@
       </div>
       <div id="reminderInput">
         <form v-on:submit.prevent="addReminder">
-          <label for="remindername">Reminder name</label>
+          <label for="reminderName">Reminder name</label>
           <input
-            v-model="remindername"
+            v-model="reminderName"
             type="text"
             id="new-reminder"
             placeholder="Name"
             required
           />
-          <label for="reminderdescription">Reminder Description</label>
+          <label for="reminderDescription">Reminder Description</label>
           <input
-            v-model="reminderdescription"
+            v-model="reminderDescription"
             type="text"
             id="new-description"
             placeholder="Description"
             :disabled="disabled == 1 ? true : false"
           />
-          <label for="remindertime">Time</label>
+          <label for="reminderTime">Time</label>
           <input
-            v-model="remindertime"
+            v-model="reminderTime"
             type="number"
             id="new-timer"
             min="1"

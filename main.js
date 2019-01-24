@@ -2,33 +2,30 @@ new Vue({
   el: "#reminderapp",
   data: {
     minutes: 0,
-    remindername: null,
-    reminderdescription: null,
-    remindertime: 0,
+    reminderName: null,
+    reminderDescription: null,
+    reminderTime: 0,
     items: [],
     setting: 1,
-    disabled: 0,
-    timestampslist: []
+    disabled: 0
   },
   methods: {
     addReminder: function() {
       if (this.setting == 1) {
-        let reminder = {
+        this.items.push({
           id: this.items.length + 1,
-          title: this.remindername,
-          description: this.reminderdescription,
-          time: this.remindertime,
-          counter: this.remindertime * 60
-        };
-        Vue.set(this.items, this.items.length, reminder);
+          title: this.reminderName,
+          description: this.reminderDescription,
+          counter: this.reminderTime * 60
+        });
         this.startTimer(this.items.length - 1);
       } else if (this.setting == 2) {
-        let reminder = {
+        this.items.push({
           id: this.items.length + 1,
-          title: this.remindername,
+          title: this.reminderName,
           counter: 0
-        };
-        Vue.set(this.items, this.items.length, reminder);
+        });
+        console.log(this.items);
         this.startTimer2(this.items.length - 1);
       }
     },
@@ -49,7 +46,7 @@ new Vue({
       setTimeout(() => {
         if (
           this.items[index].counter ==
-          parseInt(this.items[index].remindertime) * 60
+          parseInt(this.items[index].reminderTime) * 60
         ) {
         } else {
           this.startTimer2(index);
