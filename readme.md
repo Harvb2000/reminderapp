@@ -20,12 +20,18 @@ The reminderer app has two settings at this state in development:
 
 - readme.md: This is what you are reading now. It is a Markdown document used to describe what is going on in this repository.
 
-### What each programming language does
+### What each programming languages are used
 
-- HTML or Hyper Text Markup Language: HTML is a language used to build websites, it makes up the structure of each page. HTML can interact with many different languages and is styled by CSS. The latest version of HTML is HTML5.
+- HTML or Hyper Text Markup Language: HTML is a language used to build websites, it makes up the structure of each page. HTML can interact with many different languages and is styled by CSS. The latest version of HTML is HTML5. It is being sued for the main page file being displayed which is front.HTML.
 
-- JavaScript: Used to enhance the HTML language, sued in conjunction with VueJS.
+Linked files: `<link rel="stylesheet" type="text/css" href="vues.css" /> <script src="main.js"></script> <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>`
 
-- CSS or Casscading Style Sheets: Used to style HTML.
+- JavaScript: Used to enhance the HTML language, used in conjunction with VueJS. Used in the main.JS file.
+
+- CSS or Casscading Style Sheets: Used to style the HTML. Linked in the front.HTML file, this is the file it is styling.
 
 - VueJs:
+
+- Markdown: Is only used in the readme.md file, used to give information about the project in the repository. It's what you are reading from now.
+
+## How to set this project on your computer
