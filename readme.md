@@ -43,3 +43,5 @@ Linked files: `<link rel="stylesheet" type="text/css" href="vues.css" /> <script
 **Markdown:** Is only used in the readme.md file, used to give information about the project in the repository. It's what you are reading from now.
 
 ## How to set this project on your computer
+
+This project requires the a script from the Vue.Js website [Vue.Js script](https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js)
