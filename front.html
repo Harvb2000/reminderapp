@@ -52,13 +52,11 @@
           {{ item.id }}<br /><span class="title">{{ item.title }}</span
           ><br />
           <span
-            v-show="sh"
             v-bind:class="{ active: item.active }"
             v-on:click="toggleActive(item)"
             >{{ item.description }}</span
           ><br v-bind:class="{ active: item.active}" />
           <span
-            v-show="sh"
             class="time"
             v-bind:class="{ active: item.active }"
             v-on:click="toggleActive(item)"
