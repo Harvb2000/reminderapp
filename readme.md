@@ -12,12 +12,20 @@ The reminderer app has two settings at this state in development:
 
 ### What does each file does
 
--front.html: This file is the main HTML file, it holds the structure of the webapp and connects to the main Javascript file and the VueJs script.
+- front.html: This file is the main HTML file, it holds the structure of the webapp and connects to the main Javascript file and the VueJs script.
 
--main.js: This file holds the Javascript for the webapp, it mainly uses VueJs and it connects to the front HTML file.
+- main.js: This file holds the Javascript for the webapp, it mainly uses VueJs and it connects to the front HTML file.
 
--vues.css: This is the CSS document used to style the front HTML of the webapp
+- vues.css: This is the CSS document used to style the front HTML of the webapp
 
--readme.md: This is what you are reading now. It is a Markdown document used to describe what is going on in this repository.
+- readme.md: This is what you are reading now. It is a Markdown document used to describe what is going on in this repository.
 
 ### What each programming language does
+
+- HTML or Hyper Text Markup Language:
+
+- JavaScript:
+
+- CSS:
+
+- VueJs:
