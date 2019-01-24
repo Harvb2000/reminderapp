@@ -8,8 +8,7 @@ new Vue({
     items: [],
     setting: 1,
     disabled: 0,
-    timestampslist: [],
-    sh: true
+    timestampslist: []
   },
   methods: {
     addReminder: function() {
@@ -23,7 +22,6 @@ new Vue({
         };
         Vue.set(this.items, this.items.length, reminder);
         this.startTimer(this.items.length - 1);
-        this.showText(this.sh);
       } else if (this.setting == 2) {
         let reminder = {
           id: this.items.length + 1,
@@ -32,7 +30,6 @@ new Vue({
         };
         Vue.set(this.items, this.items.length, reminder);
         this.startTimer2(this.items.length - 1);
-        this.showText(this.sh);
       }
     },
     removeReminder: function(index) {
@@ -64,14 +61,6 @@ new Vue({
     toggleActive: function(item) {
       item.active = !item.active;
       console.log(item);
-    },
-
-    showText: function() {
-      if (this.setting == 1) {
-        this.sh = true;
-      } else if (this.setting == 2) {
-        this.sh = false;
-      }
     }
   }
 });
