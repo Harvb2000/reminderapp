@@ -22,10 +22,10 @@ The reminderer app has two settings at this state in development:
 
 ### What each programming language does
 
-- HTML or Hyper Text Markup Language:
+- HTML or Hyper Text Markup Language: HTML is a language used to build websites, it makes up the structure of each page. HTML can interact with many different languages and is styled by CSS. The latest version of HTML is HTML5.
 
-- JavaScript:
+- JavaScript: Used to enhance the HTML language, sued in conjunction with VueJS.
 
-- CSS:
+- CSS or Casscading Style Sheets: Used to style HTML.
 
 - VueJs:
