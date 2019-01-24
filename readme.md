@@ -22,22 +22,24 @@ The reminderer app has two settings at this state in development:
 
 ### What each programming languages are used
 
-- HTML or Hyper Text Markup Language: HTML is a language used to build websites, it makes up the structure of each page. HTML can interact with many different languages and is styled by CSS. The latest version of HTML is HTML5. It is being sued for the main page file being displayed which is front.HTML.
+**HTML or Hyper Text Markup Language:** HTML is a language used to build websites, it makes up the structure of each page. HTML can interact with many different languages and is styled by CSS. The latest version of HTML is HTML5. It is being sued for the main page file being displayed which is front.HTML.
 
 Linked files: `<link rel="stylesheet" type="text/css" href="vues.css" /> <script src="main.js"></script> <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>`
 
 ---
 
-- JavaScript: Used to enhance the HTML language, used in conjunction with VueJS. Used in the main.JS file.
+**JavaScript:** Used to enhance the HTML language, used in conjunction with VueJS. Used in the main.JS file.
 
 ---
 
-- CSS or Casscading Style Sheets: Used to style the HTML. Linked in the front.HTML file, this is the file it is styling.
+**CSS or Casscading Style Sheets:** Used to style the HTML. Linked in the front.HTML file, this is the file it is styling.
 
 ---
 
-- VueJs:
+**VueJs:**
 
-- Markdown: Is only used in the readme.md file, used to give information about the project in the repository. It's what you are reading from now.
+---
+
+**Markdown:** Is only used in the readme.md file, used to give information about the project in the repository. It's what you are reading from now.
 
 ## How to set this project on your computer
