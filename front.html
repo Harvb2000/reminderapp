@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Reminderer</title>
+    <link rel="stylesheet" type="text/css" href="vues.css">
+</head>
+<body>
+    <div id="titlediv">
+                    <h1>Reminderer</h1>
+                    </div>
+    <div id="reminderapp">
+        <div class="settingsbar">
+            <button class="settinbutton" @click="setting = 1, disabled= 0">Count Down</button>
+            <button class="settinbutton" @click="setting = 2, disabled = 1">Timer</button>
+        </div>
+            
+                
+            
+                <div id="reminderInput">
+                        <form v-on:submit.prevent="addReminder">
+            <label for="remindername">Reminder name</label>
+            <input v-model="remindername" type="text" id="new-reminder" placeholder="Name" required>
+            <label for="reminderdescription">Reminder Description</label>
+            <input v-model="reminderdescription" type="text" id="new-description" placeholder="Description" :disabled="disabled == 1 ? true : false">
+            <label for="remindertime">Time</label>
+            <input v-model="remindertime" type="number" id="new-timer" min="1" :disabled="disabled == 1 ? true : false" > 
+            <button id="addbutton">Add</button>
+            
+        </form>
+
+                              
+                 </div>
+                 <ul>
+                        <li v-for="item,index in items" class="reminder" v-bind:id='"reminder_"+item.id'>
+                                {{ item.id }}<br><span class="title">{{ item.title }}</span><br>
+                                <span v-show="sh" v-bind:class="{ active: item.active }" v-on:click="toggleActive(item)" >{{ item.description}}</span><br v-bind:class="{ active: item.active}">
+                                 <span v-show="sh" class="time" v-bind:class="{ active: item.active }"  v-on:click="toggleActive(item)">Timer:{{ item.time }} min</span><br v-bind:class="{ active: item.active }">
+                                <span class="counter">Counter:{{ item.counter }}</span> sec<br>
+                                <button class="close"  >Time stamp</button>
+                                <button class="close" v-on:click="removeReminder(index)">remove</button>
+                                
+                                </li>
+                 </ul>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script src="back.js"></script>
+</body>
+</html> 
