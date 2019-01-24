@@ -44,4 +44,6 @@ Linked files: `<link rel="stylesheet" type="text/css" href="vues.css" /> <script
 
 ## How to set this project on your computer
 
-This project requires the a script from the Vue.Js website [Vue.Js script](https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js)
+This project requires the a script from the Vue.Js website: [Vue.Js script](https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js)
+
+All you need to do is clone this repository
