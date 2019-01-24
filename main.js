@@ -24,7 +24,9 @@ new Vue({
         this.items.push({
           id: this.items.length + 1,
           title: this.reminderName,
-          counter: 0
+          counter: 0,
+          minCounter: 0,
+          secCounter: 0
         });
         this.startTimer2(this.items.length - 1);
       }
@@ -38,6 +40,10 @@ new Vue({
           alert("Timer finished");
         } else {
           this.startTimer(index);
+
+          if (this.items[index].counter == this.reminderTime * 60) {
+            this.items[index].secCounter = this.reminderTime * 60;
+          }
           this.items[index].counter--;
         }
       }, 1000);
@@ -51,6 +57,12 @@ new Vue({
         } else {
           this.startTimer2(index);
           this.items[index].counter++;
+          this.items[index].secCounter++;
+
+          if (this.items[index].secCounter == 60) {
+            this.items[index].minCounter++;
+            this.items[index].secCounter = 0;
+          }
         }
       }, 1000);
     },

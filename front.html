@@ -62,7 +62,10 @@
             v-on:click="toggleActive(item)"
             >Timer:{{ item.time }} min</span
           ><br v-bind:class="{ active: item.active }" />
-          <span class="counter">Counter:{{ item.counter }}</span> sec<br />
+          <span class="counter">Counter:{{ item.counter }} sec</span><br />
+          <span class="minCounter"
+            >Minutes counted:{{ item.minCounter }} mins</span
+          ><br />
           <button class="close" v-on:click="getTimeStamp()">Time stamp</button>
           <button class="close" v-on:click="removeReminder(index)">
             remove
