@@ -63,7 +63,7 @@
             >Timer:{{ item.time }} min</span
           ><br v-bind:class="{ active: item.active }" />
           <span class="counter">Counter:{{ item.counter }}</span> sec<br />
-          <button class="close">Time stamp</button>
+          <button class="close" v-on:click="getTimeStamp()">Time stamp</button>
           <button class="close" v-on:click="removeReminder(index)">
             remove
           </button>

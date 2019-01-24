@@ -7,7 +7,8 @@ new Vue({
     reminderTime: 0,
     items: [],
     setting: 1,
-    disabled: 0
+    disabled: 0,
+    timeStamps: []
   },
   methods: {
     addReminder: function() {
@@ -25,7 +26,6 @@ new Vue({
           title: this.reminderName,
           counter: 0
         });
-        console.log(this.items);
         this.startTimer2(this.items.length - 1);
       }
     },
@@ -54,10 +54,16 @@ new Vue({
         }
       }, 1000);
     },
-
     toggleActive: function(item) {
       item.active = !item.active;
       console.log(item);
+    },
+    getTimeStamp: function() {
+      this.timeStamps.push({
+        id: this.timeStamps.length + 1,
+        timeStamp: this.items.counter
+      });
+      console.log(this.timeStamps.id);
     }
   }
 });
