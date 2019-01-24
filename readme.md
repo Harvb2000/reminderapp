@@ -26,9 +26,15 @@ The reminderer app has two settings at this state in development:
 
 Linked files: `<link rel="stylesheet" type="text/css" href="vues.css" /> <script src="main.js"></script> <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>`
 
+---
+
 - JavaScript: Used to enhance the HTML language, used in conjunction with VueJS. Used in the main.JS file.
 
+---
+
 - CSS or Casscading Style Sheets: Used to style the HTML. Linked in the front.HTML file, this is the file it is styling.
+
+---
 
 - VueJs:
 
