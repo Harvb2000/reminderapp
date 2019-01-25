@@ -58,6 +58,13 @@ new Vue({
       });
       this.startTimerTimer(this.timerItems.length - 1);
     },
+
+    removeTimer: function() {
+      this.timerItems.splice(index, 1);
+    },
+
+    removeCountdownReminder: function() {},
+
     removeReminder: function(index) {
       this.items.splice(index, 1);
     },
