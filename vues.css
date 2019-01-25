@@ -40,6 +40,9 @@ input[type="number"] {
 
 ul {
   list-style-type: none;
+  width: auto;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 .close {
@@ -73,7 +76,7 @@ h1 {
   border-style: none;
 }
 li {
-  background-color: bisque;
+  background-color: rgb(248, 226, 200);
   padding-left: 10px;
   border-width: 1px;
   border-style: solid;
@@ -109,4 +112,37 @@ select:hover {
 
 .active {
   display: none;
+}
+
+#countdownComponent {
+  display: block;
+  width: 20%;
+  background-color: rgb(71, 71, 71);
+  padding-left: 0px;
+  padding-top: 0px;
+  border-radius: 5px;
+  height: auto;
+  min-height: 85%;
+  /*float: left;*/
+}
+
+.componentTitles {
+  display: block;
+  background-color: rgb(83, 83, 83);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-left: 5px;
+  padding-top: 1px;
+  padding-bottom: 2px;
+}
+
+#timerComponent {
+  display: hidden;
+  width: 20%;
+  background-color: rgb(71, 71, 71);
+  padding-left: 0px;
+  padding-top: 0px;
+  border-radius: 5px;
+  height: auto;
+  /*float: right;*/
 }

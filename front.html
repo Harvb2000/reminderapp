@@ -43,30 +43,30 @@
           <button id="addbutton">Add</button>
         </form>
       </div>
-      <ul>
-        <li
-          v-for="item,index in items"
-          class="reminder"
-          v-bind:id="&quot;reminder_&quot;+item.id"
-        >
-          {{ item.id }}<br /><span class="title">{{ item.title }}</span
-          ><br />
-          <span>{{ item.description }}</span
-          ><br />
-          <span class="time">Timer set to:{{ item.time }} min</span><br />
-          <span class="counter">Counter:{{ item.counter }} sec</span><br />
-          <span class="minCounter"
-            >Minutes counted:{{ item.minCounter }} mins</span
-          ><br />
-          <span>Time stamps: </span><br />
-          <span>{{ item.timeStamp }}</span
-          ><br />
-          <button class="close">Time stamp</button>
-          <button class="close" v-on:click="removeReminder(index, item)">
-            remove
-          </button>
-        </li>
-      </ul>
+      <div id="countdownComponent">
+        <h1 class="componentTitles">Countdowns</h1>
+        <ul>
+          <li
+            v-for="item,index in items"
+            class="reminder"
+            v-bind:id="&quot;reminder_&quot;+item.id"
+          >
+            {{ item.id }}<br /><span class="title">{{ item.title }}</span
+            ><br />
+            <span>{{ item.description }}</span
+            ><br />
+            <span class="time">Timer set to:{{ item.time }} min</span><br />
+            <span class="counter">Counter:{{ item.counter }} sec</span><br />
+            <span class="minCounter"
+              >Minutes counted:{{ item.minCounter }} mins</span
+            ><br />
+            <button class="close" v-on:click="removeReminder(index, item)">
+              remove
+            </button>
+          </li>
+        </ul>
+      </div>
+      <!---<div id="timerComponent"><h1 class="componentTitles">Timers</h1></div>-->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 
