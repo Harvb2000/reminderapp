@@ -34,6 +34,30 @@ new Vue({
         this.startTimer2(this.items.length - 1);
       }
     },
+
+    addCountdownReminder: function() {
+      this.countdownItems.push({
+        Id: this.countdownItems.length + 1,
+        countdownTitle: this.countdownReminderName,
+        countdownDescription: this.countdownReminderDescription,
+        countdownTime: this.countdownReminderTime,
+        countdownCounter: this.countdownReminderTime * 60,
+        CountdownMinCounter: 0,
+        CountdownSecCounter: 0
+      });
+      this.startCountdownTimer(this.countdownItems.length - 1);
+    },
+
+    addTimer: function() {
+      this.timerItems.push({
+        Id: this.timerItems.length + 1,
+        timerTitle: this.timerName,
+        timerCounter: 0,
+        timerMinCounter: 0,
+        timerSecCounter: 0
+      });
+      this.startTimerTimer(this.timerItems.length - 1);
+    },
     removeReminder: function(index) {
       this.items.splice(index, 1);
     },
@@ -45,7 +69,7 @@ new Vue({
           this.startTimer(index);
           this.items[index].counter--;
           this.items[index].secCounter++;
-          console.log(this.items[index].counter);
+
           if (this.items[index].secCounter == 60) {
             this.items[index].minCounter++;
             this.items[index].secCounter = 0;
@@ -63,7 +87,7 @@ new Vue({
           this.startTimer2(index);
           this.items[index].counter++;
           this.items[index].secCounter++;
-          console.log(this.items[index].counter);
+
           if (this.items[index].secCounter == 60) {
             this.items[index].minCounter++;
             this.items[index].secCounter = 0;
