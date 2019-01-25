@@ -43,10 +43,8 @@ new Vue({
           alert("Timer finished");
         } else {
           this.startTimer(index);
-
           this.items[index].counter--;
           this.items[index].secCounter++;
-          console.log(this.items[index].secCounter);
           if (this.items[index].secCounter == 60) {
             this.items[index].minCounter++;
             this.items[index].secCounter = 0;
@@ -64,20 +62,12 @@ new Vue({
           this.startTimer2(index);
           this.items[index].counter++;
           this.items[index].secCounter++;
-          console.log(this.items[index].secCounter);
           if (this.items[index].secCounter == 60) {
             this.items[index].minCounter++;
             this.items[index].secCounter = 0;
           }
         }
       }, 1000);
-    },
-
-    getTimeStamp: function() {
-      this.items.push({
-        timeStamp: this.items[index].counter
-      });
-      console.log(this.items[index].timeStamp);
     }
   }
 });
