@@ -2,7 +2,7 @@
 
 ## What is the reminderer app
 
-The reminderer app is a simple timer web app. It allows the user to set different timers that when finished notifies the user when it is done.
+The reminderer app is a simple timer web app. It allows the user to set different timers, one, called countdown, that when finished notifies the user when the timer are finshed and one, called timer, that is an unlimited timer.
 
 ## What can it do
 
@@ -42,8 +42,8 @@ Linked files: `<link rel="stylesheet" type="text/css" href="vues.css" /> <script
 
 **Markdown:** Is only used in the readme.md file, used to give information about the project in the repository. It's what you are reading from now.
 
-## How to set this project on your computer
+## How to set up this project on your computer
 
 This project requires the a script from the Vue.Js website: [Vue.Js script](https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js)
 
-All you need to do is clone this repository
+All you need to do is clone this repository using: `git clone https://github.com/Harvb2000/reminderapp.git` in the terminal. This will download the repository onto your local machine for you to work on.
