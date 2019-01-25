@@ -45,6 +45,7 @@ new Vue({
           this.startTimer(index);
           this.items[index].counter--;
           this.items[index].secCounter++;
+          console.log(this.items[index].counter);
           if (this.items[index].secCounter == 60) {
             this.items[index].minCounter++;
             this.items[index].secCounter = 0;
@@ -62,6 +63,7 @@ new Vue({
           this.startTimer2(index);
           this.items[index].counter++;
           this.items[index].secCounter++;
+          console.log(this.items[index].counter);
           if (this.items[index].secCounter == 60) {
             this.items[index].minCounter++;
             this.items[index].secCounter = 0;
