@@ -72,10 +72,7 @@ new Vue({
         }
       }, 1000);
     },
-    toggleActive: function(item) {
-      item.active = !item.active;
-      console.log(item);
-    },
+
     getTimeStamp: function() {
       this.timeStamps.push({
         id: this.timeStamps.length + 1,

@@ -32,7 +32,7 @@ Linked files: `<link rel="stylesheet" type="text/css" href="vues.css" /> <script
 
 ---
 
-**CSS or Casscading Style Sheets:** Used to style the HTML. Linked in the front.HTML file, this is the file it is styling.
+**CSS or Casscading Style Sheets:** Used to style the HTML. Linked in the front.HTML file, main stylesheet for project.
 
 ---
 
