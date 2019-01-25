@@ -17,7 +17,10 @@ new Vue({
           id: this.items.length + 1,
           title: this.reminderName,
           description: this.reminderDescription,
-          counter: this.reminderTime * 60
+          time: this.reminderTime,
+          counter: this.reminderTime * 60,
+          minCounter: 0,
+          secCounter: 0
         });
         this.startTimer(this.items.length - 1);
       } else if (this.setting == 2) {
@@ -41,10 +44,13 @@ new Vue({
         } else {
           this.startTimer(index);
 
-          if (this.items[index].counter == this.reminderTime * 60) {
-            this.items[index].secCounter = this.reminderTime * 60;
-          }
           this.items[index].counter--;
+          this.items[index].secCounter++;
+          console.log(this.items[index].secCounter);
+          if (this.items[index].secCounter == 60) {
+            this.items[index].minCounter++;
+            this.items[index].secCounter = 0;
+          }
         }
       }, 1000);
     },
@@ -58,7 +64,7 @@ new Vue({
           this.startTimer2(index);
           this.items[index].counter++;
           this.items[index].secCounter++;
-
+          console.log(this.items[index].secCounter);
           if (this.items[index].secCounter == 60) {
             this.items[index].minCounter++;
             this.items[index].secCounter = 0;
