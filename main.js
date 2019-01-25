@@ -74,11 +74,10 @@ new Vue({
     },
 
     getTimeStamp: function() {
-      this.timeStamps.push({
-        id: this.timeStamps.length + 1,
-        timeStamp: this.items.counter
+      this.items.push({
+        timeStamp: this.items[index].counter
       });
-      console.log(this.timeStamps.id);
+      console.log(this.items[index].timeStamp);
     }
   }
 });
