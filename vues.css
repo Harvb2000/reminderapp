@@ -123,7 +123,7 @@ select:hover {
   border-radius: 5px;
   height: auto;
   min-height: 85%;
-  /*float: left;*/
+  float: left;
 }
 
 .componentTitles {
@@ -144,5 +144,6 @@ select:hover {
   padding-top: 0px;
   border-radius: 5px;
   height: auto;
-  /*float: right;*/
+  min-height: 85%;
+  float: right;
 }
