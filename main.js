@@ -12,7 +12,8 @@ new Vue({
     timerSecCounter: 0,
     CountdownMinCounter: 0,
     CountdownSecCounter: 0,
-    whichForm: true
+    whichForm: true,
+    finishedItems: []
   },
   methods: {
     addCountdownReminder: function() {
@@ -47,44 +48,9 @@ new Vue({
       this.countdownItems.splice(index, 1);
     },
 
-    startTimer: function(index) {
-      setTimeout(() => {
-        if (this.items[index].counter == 0) {
-          alert("Timer finished");
-        } else {
-          this.startTimer(index);
-          this.items[index].counter--;
-          this.items[index].secCounter++;
-
-          if (this.items[index].secCounter == 60) {
-            this.items[index].minCounter++;
-            this.items[index].secCounter = 0;
-          }
-        }
-      }, 1000);
-    },
-    startTimer2: function(index) {
-      setTimeout(() => {
-        if (
-          this.items[index].counter ==
-          parseInt(this.items[index].reminderTime) * 60
-        ) {
-        } else {
-          this.startTimer2(index);
-          this.items[index].counter++;
-          this.items[index].secCounter++;
-
-          if (this.items[index].secCounter == 60) {
-            this.items[index].minCounter++;
-            this.items[index].secCounter = 0;
-          }
-        }
-      }, 1000);
-    },
     startCountdownTimer: function(index) {
       setTimeout(() => {
         if (this.countdownItems[index].countdownCounter == 0) {
-          alert("Countdown Complete");
         } else {
           this.startCountdownTimer(index);
           this.countdownItems[index].countdownCounter--;
