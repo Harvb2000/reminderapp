@@ -75,8 +75,9 @@
                 >Counter:{{ item.countdownCounter }} sec</span
               ><br />
               <span class="minCounter"
-                >Minutes counted:{{ item.countdownMinCounter }} mins</span
-              ><br />
+                >{{ item.countdownMinCounter }} mins</span
+              >
+              <span>{{ item.countdownSecCounter }} seconds</span><br />
               <button
                 class="close"
                 v-on:click="removeCountdownReminder(index, item)"
@@ -98,9 +99,8 @@
               ><br />
               <span class="counter">Counter:{{ item.timerCounter }} sec</span
               ><br />
-              <span class="minCounter"
-                >Minutes counted:{{ item.timerMinCounter }} mins</span
-              ><br />
+              <span class="minCounter">{{ item.timerMinCounter }} mins</span>
+              <span>{{ item.timerSecCounter }} seconds</span><br />
               <button class="close" v-on:click="removeTimer(index, item)">
                 remove
               </button>

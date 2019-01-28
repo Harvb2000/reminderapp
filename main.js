@@ -15,30 +15,6 @@ new Vue({
     whichForm: true
   },
   methods: {
-    /*addReminder: function() {
-      if (this.setting == 1) {
-        this.items.push({
-          id: this.items.length + 1,
-          title: this.reminderName,
-          description: this.reminderDescription,
-          time: this.reminderTime,
-          counter: this.reminderTime * 60,
-          minCounter: 0,
-          secCounter: 0
-        });
-        this.startTimer(this.items.length - 1);
-      } else if (this.setting == 2) {
-        this.items.push({
-          id: this.items.length + 1,
-          title: this.reminderName,
-          counter: 0,
-          minCounter: 0,
-          secCounter: 0
-        });
-        this.startTimer2(this.items.length - 1);
-      }
-    },*/
-
     addCountdownReminder: function() {
       this.countdownItems.push({
         Id: this.countdownItems.length + 1,
@@ -61,7 +37,6 @@ new Vue({
         timerSecCounter: 0
       });
       this.startTimerTimer(this.timerItems.length - 1);
-      console.log("add timer fired");
     },
 
     removeTimer: function(index) {
@@ -72,9 +47,6 @@ new Vue({
       this.countdownItems.splice(index, 1);
     },
 
-    /*removeReminder: function(index) {
-      this.items.splice(index, 1);
-    },*/
     startTimer: function(index) {
       setTimeout(() => {
         if (this.items[index].counter == 0) {
@@ -112,12 +84,11 @@ new Vue({
     startCountdownTimer: function(index) {
       setTimeout(() => {
         if (this.countdownItems[index].countdownCounter == 0) {
-          alert("Timer finished");
+          alert("Countdown Complete");
         } else {
           this.startCountdownTimer(index);
           this.countdownItems[index].countdownCounter--;
           this.countdownItems[index].countdownSecCounter++;
-          console.log(this.countdownItems[index].countdownSecCounter);
           if (this.countdownItems[index].countdownSecCounter == 60) {
             this.countdownItems[index].countdownMinCounter++;
             this.countdownItems[index].countdownSecCounter = 0;

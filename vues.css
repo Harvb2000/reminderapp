@@ -87,6 +87,7 @@ li {
   border-radius: 5px;
   margin-bottom: 5px;
   border-color: none;
+  overflow: auto;
 }
 
 body {
@@ -117,7 +118,7 @@ select:hover {
   display: flex;
 }
 .active {
-  display: none;
+  background-color: red;
 }
 
 #countdownComponent {
