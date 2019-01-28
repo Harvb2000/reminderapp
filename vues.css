@@ -10,6 +10,10 @@
   border-top-right-radius: 0px;
 }
 
+.theGrid {
+  display: grid;
+}
+
 .reminderer {
   display: block;
   background-color: blanchedalmond;
@@ -81,7 +85,7 @@ li {
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
-
+  margin-bottom: 5px;
   border-color: none;
 }
 
@@ -109,7 +113,9 @@ select:active,
 select:hover {
   outline-color: rgb(185, 131, 14);
 }
-
+#grid {
+  display: flex;
+}
 .active {
   display: none;
 }
@@ -119,11 +125,9 @@ select:hover {
   width: 20%;
   background-color: rgb(71, 71, 71);
   padding-left: 0px;
-  padding-top: 0px;
   border-radius: 5px;
   height: auto;
   min-height: 85%;
-  float: left;
 }
 
 .componentTitles {
@@ -133,11 +137,12 @@ select:hover {
   border-top-right-radius: 5px;
   padding-left: 5px;
   padding-top: 1px;
+  margin-top: 0px;
   padding-bottom: 2px;
 }
 
 #timerComponent {
-  display: hidden;
+  display: block;
   width: 20%;
   background-color: rgb(71, 71, 71);
   padding-left: 0px;
@@ -145,5 +150,5 @@ select:hover {
   border-radius: 5px;
   height: auto;
   min-height: 85%;
-  float: right;
+  margin-left: 10px;
 }

@@ -11,7 +11,8 @@ new Vue({
     timerMinCounter: 0,
     timerSecCounter: 0,
     CountdownMinCounter: 0,
-    CountdownSecCounter: 0
+    CountdownSecCounter: 0,
+    whichForm: true
   },
   methods: {
     /*addReminder: function() {

@@ -7,11 +7,15 @@
     <div id="titlediv"><h1>Reminderer</h1></div>
     <div id="reminderapp">
       <div class="settingsbar">
-        <button class="settinbutton">Count Down</button>
-        <button class="settinbutton">Timer</button>
+        <button class="settinbutton" v-on:click="whichForm = true">
+          Count Down
+        </button>
+        <button class="settinbutton" v-on:click="whichForm = false">
+          Timer
+        </button>
       </div>
       <div id="reminderInput">
-        <form v-on:submit.prevent="addCountdownReminder">
+        <form v-on:submit.prevent="addCountdownReminder" v-show="whichForm">
           <label for="countdownReminderName">Reminder name</label>
           <input
             v-model="countdownReminderName"
@@ -38,7 +42,7 @@
           <button id="addbutton">Add</button>
         </form>
 
-        <form v-on:submit.prevent="addTimer">
+        <form v-on:submit.prevent="addTimer" v-show="!whichForm">
           <label>Reminder name</label>
           <input
             v-model="timerName"
@@ -49,6 +53,8 @@
           />
           <button id="addbutton">Add</button>
         </form>
+      </div>
+      <div id="grid">
         <div id="countdownComponent">
           <h1 class="componentTitles">Countdowns</h1>
           <ul>
