@@ -51,6 +51,7 @@ new Vue({
     startCountdownTimer: function(index) {
       setTimeout(() => {
         if (this.countdownItems[index].countdownCounter == 0) {
+          this.moveItem();
         } else {
           this.startCountdownTimer(index);
           this.countdownItems[index].countdownCounter--;
@@ -76,7 +77,6 @@ new Vue({
           }
         }
       }, 1000);
-    },
-    moveItem: function() {}
+    }
   }
 });
