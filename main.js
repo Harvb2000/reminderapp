@@ -76,6 +76,7 @@ new Vue({
           }
         }
       }, 1000);
-    }
+    },
+    moveItem: function() {}
   }
 });
