@@ -12,8 +12,7 @@ new Vue({
     timerSecCounter: 0,
     CountdownMinCounter: 0,
     CountdownSecCounter: 0,
-    whichForm: true,
-    finishedItems: []
+    whichForm: true
   },
   methods: {
     addCountdownReminder: function() {
@@ -51,7 +50,6 @@ new Vue({
     startCountdownTimer: function(index) {
       setTimeout(() => {
         if (this.countdownItems[index].countdownCounter == 0) {
-          this.moveItem();
         } else {
           this.startCountdownTimer(index);
           this.countdownItems[index].countdownCounter--;
