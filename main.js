@@ -12,7 +12,8 @@ new Vue({
     timerSecCounter: 0,
     CountdownMinCounter: 0,
     CountdownSecCounter: 0,
-    whichForm: true
+    whichForm: true,
+    t: []
   },
   methods: {
     addCountdownReminder: function() {
@@ -75,6 +76,10 @@ new Vue({
           }
         }
       }, 1000);
+    },
+    newFunc: function() {
+      this.t.push(this.countdownItems);
+      console.log(this.t);
     }
   }
 });
