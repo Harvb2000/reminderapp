@@ -104,6 +104,9 @@
               <button class="close" v-on:click="removeTimer(index, item)">
                 remove
               </button>
+              <button class="close" v-on:click="timeStamp(index, item)">
+                Time stamp
+              </button>
             </li>
           </ul>
         </div>
@@ -132,6 +135,16 @@
               >
                 Remove
               </button>
+            </li>
+          </ul>
+        </div>
+        <div id="testComp">
+          <h1 class="componentTitles">Time Stamps</h1>
+          <ul>
+            <li v-for="item, index in timeStamps" class="timerReminder">
+              <span>{{ item.timeStampId }}</span
+              ><br />
+              <span>Time stamped at: {{ item.timeStamp }} seconds</span>
             </li>
           </ul>
         </div>
