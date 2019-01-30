@@ -144,7 +144,11 @@
             <li v-for="item, index in timeStamps" class="timerReminder">
               <span>{{ item.timeStampId }}</span
               ><br />
-              <span>Time stamped at: {{ item.timeStamp }} seconds</span>
+              <span>Time stamped at: {{ item.timeStamp }} seconds</span><br />
+              <span>
+                {{ item.timeStampMin }} Minutes
+                {{ item.timeStampSec }} Secs</span
+              >
             </li>
           </ul>
         </div>
