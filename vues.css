@@ -214,3 +214,15 @@ select:hover {
   border-color: none;
   overflow: auto;
 }
+
+#testComp {
+  display: block;
+  width: 20%;
+  background-color: rgb(71, 71, 71);
+  padding-left: 0px;
+  padding-top: 0px;
+  border-radius: 5px;
+  height: auto;
+  min-height: 85%;
+  margin-left: 10px;
+}

@@ -13,7 +13,8 @@ new Vue({
     CountdownMinCounter: 0,
     CountdownSecCounter: 0,
     whichForm: true,
-    finishedCountdowns: []
+    finishedCountdowns: [],
+    timeStamps: []
   },
   methods: {
     addCountdownReminder: function() {
@@ -85,6 +86,14 @@ new Vue({
     moveToFinished: function(index) {
       this.finishedCountdowns.push(this.countdownItems[index]);
       this.countdownItems.splice(index, 1);
+    },
+
+    timeStamp: function(index) {
+      this.timeStamps.push({
+        timeStampId: this.timerItems[index].Id,
+        timeStamp: this.timerItems[index].timerCounter
+      });
+      console.log(this.timeStamps);
     }
   }
 });
