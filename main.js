@@ -46,6 +46,10 @@ new Vue({
     },
 
     removeTimer: function(index) {
+      if (this.timerItems.Id == this.timeStamps.id) {
+        console.log("firedd");
+        this.timeStamps.splice(index, 1);
+      }
       this.timerItems.splice(index, 1);
       if (this.timerItems == 0) {
         this.timeId = 0;
