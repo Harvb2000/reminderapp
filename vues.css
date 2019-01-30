@@ -83,16 +83,6 @@ h1 {
 .settinbutton:hover {
   background-color: rgb(153, 153, 153);
 }
-li {
-  background-color: rgb(248, 226, 200);
-  padding-left: 10px;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  border-color: none;
-  overflow: auto;
-}
 
 body {
   background-color: rgb(37, 37, 37);
@@ -191,4 +181,36 @@ select:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(238, 200, 77);
+}
+
+.fin {
+  background-color: rgb(231, 143, 131);
+  padding-left: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border-color: none;
+  overflow: auto;
+}
+.timerReminder {
+  background-color: rgb(241, 206, 165);
+  padding-left: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border-color: none;
+  overflow: auto;
+}
+
+.reminder {
+  background-color: rgb(248, 226, 200);
+  padding-left: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border-color: none;
+  overflow: auto;
 }

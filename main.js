@@ -6,14 +6,14 @@ new Vue({
     timerName: null,
     countdownReminderName: null,
     countdownReminderDescription: null,
-    countdownReminderTime: 1,
+    countdownReminderTime: 0,
     countdownReminderCounter: 0,
     timerMinCounter: 0,
     timerSecCounter: 0,
     CountdownMinCounter: 0,
     CountdownSecCounter: 0,
     whichForm: true,
-    t: []
+    finishedCountdowns: []
   },
   methods: {
     addCountdownReminder: function() {
@@ -48,9 +48,14 @@ new Vue({
       this.countdownItems.splice(index, 1);
     },
 
+    finishedItemRemove: function(index) {
+      this.finishedCountdowns.splice(index, 1);
+    },
+
     startCountdownTimer: function(index) {
       setTimeout(() => {
         if (this.countdownItems[index].countdownCounter == 0) {
+          this.moveToFinished(index);
         } else {
           this.startCountdownTimer(index);
           this.countdownItems[index].countdownCounter--;
@@ -77,9 +82,9 @@ new Vue({
         }
       }, 1000);
     },
-    newFunc: function() {
-      this.t.push(this.countdownItems);
-      console.log(this.t);
+    moveToFinished: function(index) {
+      this.finishedCountdowns.push(this.countdownItems[index]);
+      this.countdownItems.splice(index, 1);
     }
   }
 });

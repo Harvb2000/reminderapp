@@ -84,7 +84,6 @@
               >
                 remove
               </button>
-              <button class="close    " v-on:click="newFunc()"></button>
             </li>
           </ul>
         </div>
@@ -111,7 +110,7 @@
         <div id="finishedComponent">
           <h1 class="componentTitles">Finished</h1>
           <ul>
-            <li v-for="item,index in t" class="fin">
+            <li v-for="item,index in finishedCountdowns" class="fin">
               {{ item.Id }}<br /><span class="title">{{
                 item.countdownTitle
               }}</span
@@ -127,6 +126,12 @@
                 >{{ item.countdownMinCounter }} mins</span
               >
               <span>{{ item.countdownSecCounter }} seconds</span><br />
+              <button
+                class="close"
+                v-on:click="finishedItemRemove(index, item)"
+              >
+                Remove
+              </button>
             </li>
           </ul>
         </div>
